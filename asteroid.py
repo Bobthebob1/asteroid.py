@@ -25,7 +25,7 @@ else:
     print('Sorry there has been an error. Please try again.')
 
 #API
-response_API = requests.get('https://api.nasa.gov/neo/rest/v1/feed?start_date=' +str(searchDate)+ '&end_date=' +str(searchDate)+ '&api_key=a891sk5lkhJVt0YJTSxd5bk97uCxc95HfsfjBAHP')
+response_API = requests.get('https://api.nasa.gov/neo/rest/v1/feed?start_date=' +str(searchDate)+ '&end_date=' +str(searchDate)+ '&api_key=DEMO_KEY')
 data = response_API.text
 parse_json = json.loads(data)
 allAsteroids = parse_json['near_earth_objects'][str(searchDate)]
